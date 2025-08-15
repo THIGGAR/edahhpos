@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashier Dashboard | Auntie Eddah POS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fas fa-cash-register"></i> Cashier Panel</div>
+    <div class="user-profile">
+      <span>Welcome, Cashier</span>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <a href="#dashboard" class="nav-link active" data-section="dashboard">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="#pending-orders" class="nav-link" data-section="pending-orders">
+        <i class="fas fa-clock"></i>
+        <span>Pending Orders</span>
+      </a>
+      <a href="#completed-orders" class="nav-link" data-section="completed-orders">
+        <i class="fas fa-check-circle"></i>
+        <span>Completed Orders</span>
+      </a>
+      <a href="#scan-barcode" class="nav-link" data-section="scan-barcode">
+        <i class="fas fa-barcode"></i>
+        <span>Scan Barcode</span>
+      </a>
+      <a href="#sales-report" class="nav-link" data-section="sales-report">
+        <i class="fas fa-chart-bar"></i>
+        <span>Sales Report</span>
+      </a>
+      <a href="#logout" class="nav-link" data-action="logout">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="content-section active">
+      <div class="kpi-cards">
+        <div class="card">
+          <h4>Today's Orders</h4>
+          <p id="ordersToday">8</p>
+        </div>
+        <div class="card">
+          <h4>Pending Payments</h4>
+          <p id="pendingPayments">2</p>
+        </div>
+        <div class="card">
+          <h4>Completed Transactions</h4>
+          <p id="transactionsCount">6</p>
+        </div>
+        <div class="card">
+          <h4>Today's Sales</h4>
+          <p id="todaysSales">K45,000.00</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="section">
+          <h2><i class="fas fa-money-bill-wave"></i> Recent Pending Payments</h2>
+          <div class="table-container">
+            <table id="pendingPaymentsTable">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Method</th>
+                  <th>Time</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-order-id="1023">
+                  <td>#1023</td>
+                  <td>Mathews Banda</td>
+                  <td>K12,000.00</td>
+                  <td><span class="payment-method mpamba">Mpamba</span></td>
+                  <td>14:30</td>
+                  <td>
+                    <button class="btn btn-success confirm-payment" data-order-id="1023">
+                      <i class="fas fa-check"></i> Confirm
+                    </button>
+                    <button class="btn btn-info view-order" data-order-id="1023">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                  </td>
+                </tr>
+                <tr data-order-id="1024">
+                  <td>#1024</td>
+                  <td>Taonga Gondwe</td>
+                  <td>K13,000.00</td>
+                  <td><span class="payment-method cash">Cash</span></td>
+                  <td>14:45</td>
+                  <td>
+                    <button class="btn btn-success confirm-payment" data-order-id="1024">
+                      <i class="fas fa-check"></i> Confirm
+                    </button>
+                    <button class="btn btn-info view-order" data-order-id="1024">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-plus-circle"></i> Quick Actions</h2>
+          <div class="quick-actions">
+            <button class="btn btn-primary" data-action="new-sale">
+              <i class="fas fa-plus"></i> New Sale
+            </button>
+            <button class="btn btn-warning" data-action="view-pending">
+              <i class="fas fa-clock"></i> View All Pending
+            </button>
+            <button class="btn btn-info" data-action="daily-report">
+              <i class="fas fa-chart-line"></i> Daily Report
+            </button>
+            <button class="btn btn-secondary" data-action="print-receipt">
+              <i class="fas fa-print"></i> Print Last Receipt
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pending Orders Section -->
+    <section id="pending-orders" class="content-section">
+      <div class="content">
+        <div class="section">
+          <h2><i class="fas fa-clock"></i> All Pending Orders</h2>
+          <div class="table-container">
+            <table id="allPendingOrdersTable">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Payment Method</th>
+                  <th>Created</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-order-id="1023">
+                  <td>#1023</td>
+                  <td>Mathews Banda</td>
+                  <td>K12,000.00</td>
+                  <td><span class="payment-method mpamba">Mpamba</span></td>
+                  <td>Today 14:30</td>
+                  <td>
+                    <button class="btn btn-success confirm-payment" data-order-id="1023">
+                      <i class="fas fa-check"></i> Confirm
+                    </button>
+                    <button class="btn btn-info view-order" data-order-id="1023">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </td>
+                </tr>
+                <tr data-order-id="1024">
+                  <td>#1024</td>
+                  <td>Taonga Gondwe</td>
+                  <td>K13,000.00</td>
+                  <td><span class="payment-method cash">Cash</span></td>
+                  <td>Today 14:45</td>
+                  <td>
+                    <button class="btn btn-success confirm-payment" data-order-id="1024">
+                      <i class="fas fa-check"></i> Confirm
+                    </button>
+                    <button class="btn btn-info view-order" data-order-id="1024">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </td>
+                </tr>
+                <tr data-order-id="1025">
+                  <td>#1025</td>
+                  <td>Grace Mwale</td>
+                  <td>K8,500.00</td>
+                  <td><span class="payment-method airtel">Airtel Money</span></td>
+                  <td>Today 15:10</td>
+                  <td>
+                    <button class="btn btn-success confirm-payment" data-order-id="1025">
+                      <i class="fas fa-check"></i> Confirm
+                    </button>
+                    <button class="btn btn-info view-order" data-order-id="1025">
+                      <i class="fas fa-eye"></i> View Details
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Completed Orders Section -->
+    <section id="completed-orders" class="content-section">
+      <div class="content">
+        <div class="section">
+          <h2><i class="fas fa-check-circle"></i> Completed Orders</h2>
+          <div class="table-container">
+            <table id="completedOrdersTable">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Payment Method</th>
+                  <th>Completed</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-order-id="1020">
+                  <td>#1020</td>
+                  <td>John Phiri</td>
+                  <td>K15,500.00</td>
+                  <td><span class="payment-method cash">Cash</span></td>
+                  <td>Today 12:30</td>
+                  <td>
+                    <button class="btn btn-info view-order" data-order-id="1020">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <button class="btn btn-secondary print-receipt" data-order-id="1020">
+                      <i class="fas fa-print"></i> Print
+                    </button>
+                  </td>
+                </tr>
+                <tr data-order-id="1021">
+                  <td>#1021</td>
+                  <td>Mary Tembo</td>
+                  <td>K9,200.00</td>
+                  <td><span class="payment-method mpamba">Mpamba</span></td>
+                  <td>Today 13:15</td>
+                  <td>
+                    <button class="btn btn-info view-order" data-order-id="1021">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <button class="btn btn-secondary print-receipt" data-order-id="1021">
+                      <i class="fas fa-print"></i> Print
+                    </button>
+                  </td>
+                </tr>
+                <tr data-order-id="1022">
+                  <td>#1022</td>
+                  <td>Peter Mbewe</td>
+                  <td>K7,800.00</td>
+                  <td><span class="payment-method airtel">Airtel Money</span></td>
+                  <td>Today 13:45</td>
+                  <td>
+                    <button class="btn btn-info view-order" data-order-id="1022">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <button class="btn btn-secondary print-receipt" data-order-id="1022">
+                      <i class="fas fa-print"></i> Print
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scan Barcode Section -->
+    <section id="scan-barcode" class="content-section">
+      <div class="content">
+        <div class="section">
+          <h2><i class="fas fa-barcode"></i> Barcode Scanner & Cart</h2>
+          
+          <div class="scanner-container">
+            <div class="scanner-input">
+              <div class="form-group">
+                <label for="barcodeInput">Barcode / Product Code:</label>
+                <input type="text" id="barcodeInput" placeholder="Scan or enter barcode" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="quantityInput">Quantity:</label>
+                <input type="number" id="quantityInput" value="1" min="1" class="form-control">
+              </div>
+              <div class="scanner-buttons">
+                <button id="addToCartBtn" class="btn btn-primary">
+                  <i class="fas fa-plus"></i> Add to Cart
+                </button>
+                <button id="startScanner" class="btn btn-secondary">
+                  <i class="fas fa-camera"></i> Start Camera
+                </button>
+                <button id="stopScanner" class="btn btn-danger" style="display: none;">
+                  <i class="fas fa-stop"></i> Stop Camera
+                </button>
+              </div>
+            </div>
+            
+            <div class="scanner-preview" id="scannerPreview">
+              <p>Camera scanner will appear here</p>
+            </div>
+          </div>
+
+          <div class="scanner-result" id="scannerResult" style="display: none;">
+            <strong>Scanned Product:</strong> <span id="scannedProduct"></span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><i class="fas fa-shopping-cart"></i> Current Cart</h2>
+          <div class="cart-container">
+            <div class="table-container">
+              <table id="cartTable">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cartItems">
+                  <!-- Cart items will be added here dynamically -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3"><strong>Total:</strong></td>
+                    <td><strong id="cartTotal">K0.00</strong></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            
+            <div class="cart-actions">
+              <div class="payment-method-selection">
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" class="form-control">
+                  <option value="">Select Payment Method</option>
+                  <option value="cash">Cash</option>
+                  <option value="mpamba">Mpamba</option>
+                  <option value="airtel">Airtel Money</option>
+                  <option value="card">Card</option>
+                </select>
+              </div>
+              <div class="cart-buttons">
+                <button id="clearCartBtn" class="btn btn-warning">
+                  <i class="fas fa-trash"></i> Clear Cart
+                </button>
+                <button id="processPaymentBtn" class="btn btn-success">
+                  <i class="fas fa-credit-card"></i> Process Payment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sales Report Section -->
+    <section id="sales-report" class="content-section">
+      <div class="content">
+        <div class="section">
+          <h2><i class="fas fa-chart-bar"></i> Sales Report</h2>
+          
+          <div class="report-filters">
+            <div class="form-group">
+              <label for="reportStartDate">Start Date:</label>
+              <input type="date" id="reportStartDate" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="reportEndDate">End Date:</label>
+              <input type="date" id="reportEndDate" class="form-control">
+            </div>
+            <button id="generateReportBtn" class="btn btn-primary">
+              <i class="fas fa-chart-line"></i> Generate Report
+            </button>
+          </div>
+
+          <div class="report-summary">
+            <div class="summary-cards">
+              <div class="card">
+                <h4>Total Sales</h4>
+                <p id="reportTotalSales">K0.00</p>
+              </div>
+              <div class="card">
+                <h4>Total Orders</h4>
+                <p id="reportTotalOrders">0</p>
+              </div>
+              <div class="card">
+                <h4>Average Order</h4>
+                <p id="reportAvgOrder">K0.00</p>
+              </div>
+              <div class="card">
+                <h4>Payment Methods</h4>
+                <p id="reportPaymentMethods">-</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table id="salesReportTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Orders</th>
+                  <th>Total Sales</th>
+                  <th>Cash</th>
+                  <th>Mobile Money</th>
+                  <th>Card</th>
+                </tr>
+              </thead>
+              <tbody id="salesReportData">
+                <!-- Report data will be populated here -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="report-actions">
+            <button id="printReportBtn" class="btn btn-secondary">
+              <i class="fas fa-print"></i> Print Report
+            </button>
+            <button id="exportReportBtn" class="btn btn-info">
+              <i class="fas fa-download"></i> Export CSV
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Auntie Eddah POS
+    </footer>
+  </main>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loading-spinner">
+      <i class="fas fa-spinner fa-spin"></i>
+      <p>Processing...</p>
+    </div>
+  </div>
+
+  <!-- Notification Container -->
+  <div id="notificationContainer" class="notification-container"></div>
+
+  <script src="fixed_script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+2025-07-22 13:02:32: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 13:19:28: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 13:19:31: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 13:34:18: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 13:35:47: createOrderWithItems failed: Table 'aepos.order_items' doesn't exist
+2025-07-22 13:35:55: createOrderWithItems failed: Table 'aepos.order_items' doesn't exist
+2025-07-22 13:37:03: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 19:47:57: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 19:55:13: getCompletedOrders failed: Unknown column 'o.updated_at' in 'field list'
+2025-07-22 21:09:12: getOrderItems failed: Table 'aepos.order_items' doesn't exist
+2025-07-22 21:15:34: getOrderItems failed: Table 'aepos.order_items' doesn't exist
+2025-07-22 21:44:13: getCompletedOrders failed: Unknown column 'mole' in 'field list'
+2025-07-22 21:44:22: getCompletedOrders failed: Unknown column 'mole' in 'field list'
+2025-07-22 21:57:45: getCompletedOrders failed: Unknown column 'mole' in 'field list'
+2025-07-22 21:57:47: getCompletedOrders failed: Unknown column 'mole' in 'field list'
+2025-07-22 21:57:48: getCompletedOrders failed: Unknown column 'mole' in 'field list'
+2025-07-22 22:11:55: createOrderWithItems failed: Insufficient stock for product: nivia

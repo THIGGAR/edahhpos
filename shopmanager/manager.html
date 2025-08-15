@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Manager Dashboard | Auntie Eddah POS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="improved_style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-store"></i> 
+                <span>Shop Manager Panel</span>
+            </div>
+        </div>
+        <div class="user-profile">
+            <div class="user-info">
+                <span class="welcome-text">Welcome, Shop Manager</span>
+                <span class="user-role">Manager</span>
+            </div>
+            <div class="user-actions">
+                <button class="btn btn-sm btn-secondary" id="settingsBtn">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button class="btn btn-sm btn-danger" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#users" class="nav-link" data-section="users">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+            <a href="#products" class="nav-link" data-section="products">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a href="#shop-orders" class="nav-link" data-section="shop-orders">
+                <i class="fas fa-truck"></i>
+                <span>Shop Orders</span>
+            </a>
+            <a href="#supplier-payments" class="nav-link" data-section="supplier-payments">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Supplier Payments</span>
+            </a>
+            <a href="#sales-reports" class="nav-link" data-section="sales-reports">
+                <i class="fas fa-chart-line"></i>
+                <span>Sales Reports</span>
+            </a>
+            <a href="#inventory-reports" class="nav-link" data-section="inventory-reports">
+                <i class="fas fa-boxes"></i>
+                <span>Inventory Reports</span>
+            </a>
+            <a href="#settings" class="nav-link" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+            <div class="section-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Dashboard Overview</h1>
+                <div class="section-actions">
+                    <button class="btn btn-primary" id="refreshDashboard">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="kpi-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4>Pending Orders</h4>
+                        <p id="pendingOrders">5</p>
+                        <span class="card-trend">+2 from yesterday</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4>Pending Payments</h4>
+                        <p id="pendingPayments">2</p>
+                        <span class="card-trend">-1 from yesterday</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4>Today's Sales</h4>
+                        <p id="todaysSales">MWK 45,200</p>
+                        <span class="card-trend positive">+15% from yesterday</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4>Active Users</h4>
+                        <p id="activeUsers">12</p>
+                        <span class="card-trend">No change</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-truck"></i> Recent Orders</h3>
+                        <button class="btn btn-sm btn-primary" onclick="showSection('shop-orders')">
+                            View All
+                        </button>
+                    </div>
+                    <div class="widget-content">
+                        <div class="table-container">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Supplier</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recentOrdersTable">
+                                    <!-- Dynamic content will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-widget">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-chart-pie"></i> Sales Overview</h3>
+                        <select class="form-control" id="salesPeriod">
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                        </select>
+                    </div>
+                    <div class="widget-content">
+                        <div class="sales-chart">
+                            <canvas id="salesChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-users"></i> User Management</h1>
+                <div class="section-actions">
+                    <button class="btn btn-success" id="addUserBtn">
+                        <i class="fas fa-user-plus"></i> Add User
+                    </button>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="userSearch" placeholder="Search users...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select id="roleFilter" class="form-control">
+                            <option value="">All Roles</option>
+                            <option value="cashier">Cashier</option>
+                            <option value="inventory_manager">Inventory Manager</option>
+                            <option value="supplier">Supplier</option>
+                        </select>
+                        <select id="statusFilter" class="form-control">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Last Active</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic content will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-box"></i> Product Management</h1>
+                <div class="section-actions">
+                    <button class="btn btn-success" id="addProductBtn">
+                        <i class="fas fa-plus"></i> Add Product
+                    </button>
+                    <button class="btn btn-secondary" id="importProductsBtn">
+                        <i class="fas fa-upload"></i> Import
+                    </button>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="productSearch" placeholder="Search products...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select id="categoryFilter" class="form-control">
+                            <option value="">All Categories</option>
+                            <!-- Dynamic categories will be loaded here -->
+                        </select>
+                        <select id="promotionFilter" class="form-control">
+                            <option value="">All Products</option>
+                            <option value="1">Promotional Items</option>
+                            <option value="0">Regular Items</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Barcode</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic content will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Orders Section -->
+        <section id="shop-orders" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-truck"></i> Shop Orders</h1>
+                <div class="section-actions">
+                    <button class="btn btn-success" id="newOrderBtn">
+                        <i class="fas fa-plus"></i> New Order
+                    </button>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" id="orderSearch" placeholder="Search orders...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select id="orderStatusFilter" class="form-control">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                        <input type="date" id="orderDateFilter" class="form-control">
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="ordersTable">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Supplier</th>
+                                <th>Items</th>
+                                <th>Total Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic content will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections will be similar... -->
+        <section id="supplier-payments" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-money-bill-wave"></i> Supplier Payments</h1>
+            </div>
+            <div class="section-content">
+                <p>Supplier payments management content will be loaded here.</p>
+            </div>
+        </section>
+
+        <section id="sales-reports" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-chart-line"></i> Sales Reports</h1>
+            </div>
+            <div class="section-content">
+                <p>Sales reports content will be loaded here.</p>
+            </div>
+        </section>
+
+        <section id="inventory-reports" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-boxes"></i> Inventory Reports</h1>
+            </div>
+            <div class="section-content">
+                <p>Inventory reports content will be loaded here.</p>
+            </div>
+        </section>
+
+        <section id="settings" class="content-section">
+            <div class="section-header">
+                <h1><i class="fas fa-cog"></i> Settings</h1>
+            </div>
+            <div class="section-content">
+                <p>Settings content will be loaded here.</p>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Auntie Eddah POS - Shop Manager Dashboard
+        </footer>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="addUserModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fas fa-user-plus"></i> Add New User</h3>
+                <button class="close-modal" data-modal="addUserModal">&times;</button>
+            </div>
+            <form id="addUserForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="last_name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select Role</option>
+                            <option value="cashier">Cashier</option>
+                            <option value="inventory_manager">Inventory Manager</option>
+                            <option value="supplier">Supplier</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal" data-modal="addUserModal">Cancel</button>
+                    <button type="submit" class="btn btn-success">Create User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="newOrderModal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fas fa-cart-plus"></i> Create New Order</h3>
+                <button class="close-modal" data-modal="newOrderModal">&times;</button>
+            </div>
+            <form id="newOrderForm">
+                <div class="form-group">
+                    <label for="supplierSelect">Supplier</label>
+                    <select id="supplierSelect" name="supplier_id" required>
+                        <option value="">Select Supplier</option>
+                        <!-- Dynamic suppliers will be loaded here -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Order Items</label>
+                    <div class="order-items-container">
+                        <div id="orderItemsList" class="order-items-list">
+                            <div class="no-items-message">
+                                <i class="fas fa-box-open"></i>
+                                <p>No items added yet</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="addItemBtn">
+                            <i class="fas fa-plus"></i> Add Item
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="orderNotes">Notes</label>
+                    <textarea id="orderNotes" name="notes" rows="3" placeholder="Additional notes for this order..."></textarea>
+                </div>
+                
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Total Items:</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Amount:</span>
+                        <span id="totalAmount">MWK 0.00</span>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal" data-modal="newOrderModal">Cancel</button>
+                    <button type="submit" class="btn btn-success">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="improved_script.js"></script>
+</body>
+</html>
+

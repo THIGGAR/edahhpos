@@ -1,0 +1,11 @@
+[2025-08-06 21:51:22] ERROR: API Error: Failed to register new product: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity' in 'field list' 
+[2025-08-06 21:51:29] ERROR: Error adding category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' {"name":"malambe"}
+[2025-08-06 21:51:29] ERROR: API Error: Failed to add new category: Failed to add category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' 
+[2025-08-06 21:51:41] ERROR: Error adding category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' {"name":"malambe"}
+[2025-08-06 21:51:41] ERROR: API Error: Failed to add new category: Failed to add category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' 
+[2025-08-06 21:51:47] ERROR: Error adding category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' {"name":"malambe"}
+[2025-08-06 21:51:47] ERROR: API Error: Failed to add new category: Failed to add category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' 
+[2025-08-06 21:51:54] ERROR: Error adding category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' {"name":"malambe"}
+[2025-08-06 21:51:54] ERROR: API Error: Failed to add new category: Failed to add category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' 
+[2025-08-06 21:52:18] ERROR: Error adding category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' {"name":"malambe"}
+[2025-08-06 21:52:18] ERROR: API Error: Failed to add new category: Failed to add category: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'malambe' for key 'name' 
