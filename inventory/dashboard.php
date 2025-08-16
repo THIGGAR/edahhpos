@@ -441,8 +441,8 @@ try {
                                 </select>
                                 <div id="stockProductError" class="error"></div>
 
-                                <label for="stockBarcode">Barcode:</label>
-                                <input type="text" id="stockBarcode" name="verify barcode" required placeholder="Enter or scan barcode">
+                                <label for="stockBarcode">verify Barcode:</label>
+                                <input type="text" id="stockBarcode" name="barcode" required placeholder="Enter or scan barcode">
                                 <div id="stockBarcodeError" class="error"></div>
 
                                 <label for="stockQuantity">Quantity:</label>

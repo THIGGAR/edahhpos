@@ -945,3 +945,157 @@
 2025-08-15 18:00:54 - ERROR: Failed to log user action: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aepos.user_actions' doesn't exist - Context: {"user_id":2,"action":"Added product: hello in category mabaz","action_type":"product_registration"}
 2025-08-15 18:05:55 - ERROR: Composer autoloader not found
 2025-08-15 18:05:55 - ERROR: Barcode Generator Error: Server configuration error: Missing dependencies
+2025-08-16 01:51:42 - ERROR: Composer autoloader not found
+2025-08-16 01:51:42 - ERROR: Barcode Generator Error: Server configuration error: Missing dependencies
+2025-08-16 01:51:44 - ERROR: Composer autoloader not found
+2025-08-16 01:51:44 - ERROR: Barcode Generator Error: Server configuration error: Missing dependencies
+2025-08-16 01:51:45 - ERROR: Composer autoloader not found
+2025-08-16 01:51:45 - ERROR: Barcode Generator Error: Server configuration error: Missing dependencies
+2025-08-16 02:09:41 - ERROR: Composer autoloader not found
+2025-08-16 02:09:41 - ERROR: Barcode Generator Error: Server configuration error: Missing dependencies
+2025-08-16 03:09:18 - ERROR: No product found for barcode - Context: {"barcode":"60095236"}
+2025-08-16 03:09:18 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60095236","error":"Database query failed"}}
+2025-08-16 03:09:19 - ERROR: No product found for barcode - Context: {"barcode":"600952360"}
+2025-08-16 03:09:19 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600952360","error":"Database query failed"}}
+2025-08-16 03:09:21 - ERROR: No product found for barcode - Context: {"barcode":"6009523607"}
+2025-08-16 03:09:21 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6009523607","error":"Database query failed"}}
+2025-08-16 03:09:22 - ERROR: No product found for barcode - Context: {"barcode":"60095236070"}
+2025-08-16 03:09:22 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60095236070","error":"Database query failed"}}
+2025-08-16 03:09:27 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:09:34 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:10:32 - ERROR: No product found for barcode - Context: {"barcode":"62011000"}
+2025-08-16 03:10:32 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62011000","error":"Database query failed"}}
+2025-08-16 03:10:33 - ERROR: No product found for barcode - Context: {"barcode":"620110003"}
+2025-08-16 03:10:33 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620110003","error":"Database query failed"}}
+2025-08-16 03:10:33 - ERROR: No product found for barcode - Context: {"barcode":"6201100032"}
+2025-08-16 03:10:33 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6201100032","error":"Database query failed"}}
+2025-08-16 03:10:36 - ERROR: No product found for barcode - Context: {"barcode":"62011000326"}
+2025-08-16 03:10:36 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62011000326","error":"Database query failed"}}
+2025-08-16 03:10:37 - ERROR: No product found for barcode - Context: {"barcode":"620110003263"}
+2025-08-16 03:10:37 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620110003263","error":"Database query failed"}}
+2025-08-16 03:10:42 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:10:44 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:27 - ERROR: No product found for barcode - Context: {"barcode":"62040001"}
+2025-08-16 03:11:27 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62040001","error":"Database query failed"}}
+2025-08-16 03:11:27 - ERROR: No product found for barcode - Context: {"barcode":"620400013"}
+2025-08-16 03:11:27 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620400013","error":"Database query failed"}}
+2025-08-16 03:11:29 - ERROR: No product found for barcode - Context: {"barcode":"6204000131"}
+2025-08-16 03:11:29 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6204000131","error":"Database query failed"}}
+2025-08-16 03:11:29 - ERROR: No product found for barcode - Context: {"barcode":"62040001311"}
+2025-08-16 03:11:29 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62040001311","error":"Database query failed"}}
+2025-08-16 03:11:29 - ERROR: No product found for barcode - Context: {"barcode":"620400013111"}
+2025-08-16 03:11:29 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620400013111","error":"Database query failed"}}
+2025-08-16 03:11:36 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:37 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:38 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:38 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:39 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:39 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:39 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:40 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:40 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:40 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:40 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:41 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:41 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:41 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:41 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:11:41 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:12:02 - ERROR: No product found for barcode - Context: {"barcode":"600967859260"}
+2025-08-16 03:12:02 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600967859260","error":"Database query failed"}}
+2025-08-16 03:12:03 - ERROR: No product found for barcode - Context: {"barcode":"6009678592600"}
+2025-08-16 03:12:03 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6009678592600","error":"Database query failed"}}
+2025-08-16 03:12:29 - ERROR: Failed to log stock movement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' - Context: {"product_id":"48","quantity":11,"movement_type":"in"}
+2025-08-16 03:12:29 - ERROR: Failed to log user action: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aepos.user_actions' doesn't exist - Context: {"user_id":2,"action":"Added product: kaa in category mabaz","action_type":"product_registration"}
+2025-08-16 03:12:56 - ERROR: No product found for barcode - Context: {"barcode":"99090989"}
+2025-08-16 03:12:56 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"99090989","error":"Database query failed"}}
+2025-08-16 03:12:56 - ERROR: No product found for barcode - Context: {"barcode":"990909898"}
+2025-08-16 03:12:56 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"990909898","error":"Database query failed"}}
+2025-08-16 03:12:57 - ERROR: No product found for barcode - Context: {"barcode":"9909098987"}
+2025-08-16 03:12:57 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"9909098987","error":"Database query failed"}}
+2025-08-16 03:12:57 - ERROR: No product found for barcode - Context: {"barcode":"99090989877"}
+2025-08-16 03:12:57 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"99090989877","error":"Database query failed"}}
+2025-08-16 03:13:10 - ERROR: Failed to log stock movement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' - Context: {"product_id":"49","quantity":12,"movement_type":"in"}
+2025-08-16 03:13:10 - ERROR: Failed to log user action: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aepos.user_actions' doesn't exist - Context: {"user_id":2,"action":"Added product: oioi in category juju","action_type":"product_registration"}
+2025-08-16 03:13:35 - ERROR: No product found for barcode - Context: {"barcode":"90988766"}
+2025-08-16 03:13:35 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"90988766","error":"Database query failed"}}
+2025-08-16 03:13:35 - ERROR: No product found for barcode - Context: {"barcode":"909887666"}
+2025-08-16 03:13:35 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"909887666","error":"Database query failed"}}
+2025-08-16 03:13:35 - ERROR: No product found for barcode - Context: {"barcode":"9098876665"}
+2025-08-16 03:13:35 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"9098876665","error":"Database query failed"}}
+2025-08-16 03:13:36 - ERROR: No product found for barcode - Context: {"barcode":"90988766655"}
+2025-08-16 03:13:36 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"90988766655","error":"Database query failed"}}
+2025-08-16 03:13:36 - ERROR: No product found for barcode - Context: {"barcode":"909887666555"}
+2025-08-16 03:13:36 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"909887666555","error":"Database query failed"}}
+2025-08-16 03:13:47 - ERROR: Failed to log stock movement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' - Context: {"product_id":"50","quantity":11,"movement_type":"in"}
+2025-08-16 03:13:47 - ERROR: Failed to log user action: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aepos.user_actions' doesn't exist - Context: {"user_id":2,"action":"Added product: op in category juju","action_type":"product_registration"}
+2025-08-16 03:14:05 - ERROR: No product found for barcode - Context: {"barcode":"620400013111"}
+2025-08-16 03:14:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620400013111","error":"Database query failed"}}
+2025-08-16 03:14:05 - ERROR: No product found for barcode - Context: {"barcode":"62040001311"}
+2025-08-16 03:14:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62040001311","error":"Database query failed"}}
+2025-08-16 03:14:05 - ERROR: No product found for barcode - Context: {"barcode":"6204000131"}
+2025-08-16 03:14:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6204000131","error":"Database query failed"}}
+2025-08-16 03:14:05 - ERROR: No product found for barcode - Context: {"barcode":"620400013"}
+2025-08-16 03:14:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620400013","error":"Database query failed"}}
+2025-08-16 03:14:05 - ERROR: No product found for barcode - Context: {"barcode":"62040001"}
+2025-08-16 03:14:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62040001","error":"Database query failed"}}
+2025-08-16 03:14:13 - ERROR: No product found for barcode - Context: {"barcode":"90988766"}
+2025-08-16 03:14:13 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"90988766","error":"Database query failed"}}
+2025-08-16 03:14:13 - ERROR: No product found for barcode - Context: {"barcode":"909887666"}
+2025-08-16 03:14:13 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"909887666","error":"Database query failed"}}
+2025-08-16 03:14:14 - ERROR: No product found for barcode - Context: {"barcode":"9098876665"}
+2025-08-16 03:14:14 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"9098876665","error":"Database query failed"}}
+2025-08-16 03:14:14 - ERROR: No product found for barcode - Context: {"barcode":"90988766655"}
+2025-08-16 03:14:14 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"90988766655","error":"Database query failed"}}
+2025-08-16 03:14:17 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:14:18 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:14:18 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:14:25 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:14:26 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:14:27 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:16:47 - ERROR: No product found for barcode - Context: {"barcode":"62030110"}
+2025-08-16 03:16:47 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62030110","error":"Database query failed"}}
+2025-08-16 03:16:48 - ERROR: No product found for barcode - Context: {"barcode":"620301106"}
+2025-08-16 03:16:48 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620301106","error":"Database query failed"}}
+2025-08-16 03:16:48 - ERROR: No product found for barcode - Context: {"barcode":"6203011069"}
+2025-08-16 03:16:48 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6203011069","error":"Database query failed"}}
+2025-08-16 03:16:49 - ERROR: No product found for barcode - Context: {"barcode":"62030110699"}
+2025-08-16 03:16:49 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62030110699","error":"Database query failed"}}
+2025-08-16 03:16:50 - ERROR: No product found for barcode - Context: {"barcode":"6203011069"}
+2025-08-16 03:16:50 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6203011069","error":"Database query failed"}}
+2025-08-16 03:16:50 - ERROR: No product found for barcode - Context: {"barcode":"620301106"}
+2025-08-16 03:16:50 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620301106","error":"Database query failed"}}
+2025-08-16 03:16:52 - ERROR: No product found for barcode - Context: {"barcode":"6203011060"}
+2025-08-16 03:16:52 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6203011060","error":"Database query failed"}}
+2025-08-16 03:16:58 - ERROR: No product found for barcode - Context: {"barcode":"62030110608"}
+2025-08-16 03:16:58 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"62030110608","error":"Database query failed"}}
+2025-08-16 03:16:58 - ERROR: No product found for barcode - Context: {"barcode":"620301106080"}
+2025-08-16 03:16:58 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"620301106080","error":"Database query failed"}}
+2025-08-16 03:17:04 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:22:51 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:22:53 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:22:54 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:25:17 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:26:04 - ERROR: No product found for barcode - Context: {"barcode":"60096785"}
+2025-08-16 03:26:04 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60096785","error":"Database query failed"}}
+2025-08-16 03:26:05 - ERROR: No product found for barcode - Context: {"barcode":"600967850"}
+2025-08-16 03:26:05 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600967850","error":"Database query failed"}}
+2025-08-16 03:26:09 - ERROR: No product found for barcode - Context: {"barcode":"6009678502"}
+2025-08-16 03:26:09 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6009678502","error":"Database query failed"}}
+2025-08-16 03:26:10 - ERROR: No product found for barcode - Context: {"barcode":"60096785026"}
+2025-08-16 03:26:10 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60096785026","error":"Database query failed"}}
+2025-08-16 03:26:12 - ERROR: No product found for barcode - Context: {"barcode":"600967850262"}
+2025-08-16 03:26:12 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600967850262","error":"Database query failed"}}
+2025-08-16 03:26:25 - ERROR: API Error: Barcode is required and must be digits only - Details: {"field":"barcode"}
+2025-08-16 03:29:25 - ERROR: No product found for barcode - Context: {"barcode":"600704800901"}
+2025-08-16 03:29:25 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600704800901","error":"Database query failed"}}
+2025-08-16 03:29:26 - ERROR: No product found for barcode - Context: {"barcode":"60070480090"}
+2025-08-16 03:29:26 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60070480090","error":"Database query failed"}}
+2025-08-16 03:29:26 - ERROR: No product found for barcode - Context: {"barcode":"6007048009"}
+2025-08-16 03:29:26 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"6007048009","error":"Database query failed"}}
+2025-08-16 03:29:26 - ERROR: No product found for barcode - Context: {"barcode":"600704800"}
+2025-08-16 03:29:26 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"600704800","error":"Database query failed"}}
+2025-08-16 03:29:26 - ERROR: No product found for barcode - Context: {"barcode":"60070480"}
+2025-08-16 03:29:26 - ERROR: Check Barcode Error: Failed to query product by barcode - Context: {"details":{"barcode":"60070480","error":"Database query failed"}}
+2025-08-16 03:29:39 - ERROR: Failed to log stock movement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' - Context: {"product_id":49,"quantity":90,"movement_type":"in"}
+2025-08-16 03:29:39 - ERROR: Failed to log user action: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aepos.user_actions' doesn't exist - Context: {"user_id":2,"action":"Updated stock for product: oioi (+90)","action_type":"stock_update"}
